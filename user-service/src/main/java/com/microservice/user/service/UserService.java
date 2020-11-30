@@ -39,7 +39,7 @@ public class UserService {
         UserResponseTemplate dto = new UserResponseTemplate();
         
         dto.setUser(userRepository.findUserByUsrId(id));
-        dto.setDepartment(restTemplate.getForObject("http://localhost:9001/department/" + dto.getUser().getUsrDepartmentId(), Department.class));
+        dto.setDepartment(restTemplate.getForObject("http://DEPARTMENT-SERVICE/department/" + dto.getUser().getUsrDepartmentId(), Department.class));
         
         return dto;
     }
