@@ -16,7 +16,6 @@ spring:
                         args:
                             name: USER-SERVICE
                             fallbackuri: forward:/userServiceFallback
-                      
                 - id: DEPARTMENT-SERVICE
                   uri: lb://DEPARTMENT-SERVICE
                   predicates:
@@ -36,7 +35,7 @@ hystrix:
                         timeoutInMilliseconds: 4000
 
 management:
-    endpoint:
+    endpoints:
         web:
             exposure:
                 include: hystrix.stream

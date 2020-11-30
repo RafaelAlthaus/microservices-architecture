@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @author hmt-05
  */
 @RestController
-public class fallbackMethodController {
+public class FallbackMethodController {
 
     @GetMapping("/userServiceFallback")
     public String userServiceFallbackMethod() {
